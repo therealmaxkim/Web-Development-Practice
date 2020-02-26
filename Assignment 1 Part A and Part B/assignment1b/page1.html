@@ -1,0 +1,136 @@
+<!DOCTYPE HTML> 
+
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		-->
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<nav class="navbar">
+		<ul>
+			<li><a href="index.html">Home: Merge k Sorted Lists</a></li>
+			<li><a href="page1.html">Longest Repeating Character Replacement</a></li>
+			<li><a href="page2.html">Relative Sort Array</a></li>
+			<li><a href="page3.html">Remove Nth Node From End of List</a></li>
+			<li><a href="page4.html">Set Matrix Zeroes</a></li>
+			<li><a href="page5.html">HTML Form</a></li>
+		</ul>
+	</nav>
+
+	<header>
+		<div class="main-header">
+			<h1>Longest Repeating Character Replacement</h1>
+		</div>
+	</header>
+
+	<body>
+		<section class="problem-statement"> 
+			<article>
+				<h1 class="title">Problem Description</h1>
+				<p>Given a string s that consists of only uppercase English letters, you can perform at most k operations on that string.</p>
+				<p>In one operation, you can choose any character of the string and change it to any other uppercase English character.</p> 
+				<p>Find the length of the longest sub-string containing all repeating letters you can get after performing the above operations.</p>
+				<p>Note: Both the string's length and k will not exceed 10^4.</p>
+			</article>
+
+			<article>
+				<h1 class="title">Examples</h1>
+				<div class="row">
+					<div class="col-md-3">
+						<p>Input: s = "ABAB", k = 2</p>
+						<p>Output: 4</p>
+						<p>Explanation: Replace the two 'A's with two 'B's or vice versa.</p>
+					</div>
+					<div class="col-md-3">
+						<p>Input: s = "AABABBA", k = 1</p>
+						<p>Output: 4</p>
+						<p>Explanation: Replace the one 'A' in the middle with 'B' and form "AABBBBA". The substring "BBBB" has the longest repeating letters, which is 4.</p>
+					</div>
+				</div>
+			</article>
+		</section>
+
+		<section class="my-solution">
+			<article>
+				<h1 class="title">Questions</h1>
+				<ol>
+					<li>Can k equal zero?</li>
+				</ol>
+			</article>
+
+			<article>
+				<h1 class="title">Observations</h1>
+				<ol>
+					<li>You can perform AT MOST K operations. so you can do 0 to k replacements.</li>
+					<li>The longest subsequence must be consecutive.</li>
+					<li>Think of how you would solve if k=1 and go from there.</li>
+				</ol>
+			</article>
+
+			<aside class="photos">
+				<img src="page1/diagram.jpeg" class="left" alt="Diagram 1">
+				<img src="page1/diagram2.jpeg" class="right" alt="Diagram 2">
+			</aside>
+
+			<article>
+				<h1 class="title">Ideas</h1>
+				<div>
+					<h2>Idea 1: DP </h2>
+					<p>If you can only change 1, then DP solution: at each index, what is the longest identical subsequence? Include the letter that it has and its length. Compare if you make a character shift at this index versus doing it earlier.</p>
+					<p>Could you change the representation of the elements? Convert each string to a letter followed by repetitions : ABABAAAA = [A1, B1, A1, B1, A4] then check if changing the current index to adjacent letters will increase length </p>
+				</div>
+				<div>
+					<h2>Idea 2: Sliding window</h2>
+					<ol>
+						<li>Initialize a dictionary that maps alphabet characters to zero </li>
+						<li>Initialize L and R pointers </li>
+						<li>Expand R until violate K</li>
+						<li>When do you move L ? only if you used up all of your K</li>
+						<li>when do you move R (expand window)? when majority of characters are same and you have K left over. </li>
+					</ol>
+					<p>length of window = R-L+1. The max number of same letters = number of k violations.</p>
+					
+					<p>maxCount = largest count of a single, unique character in the current window. The main equation is: end-start+1-maxCount</p>
+					<p>When end-start+1-maxCount == 0, then then the window is filled with only one character When end-start+1-maxCount > 0, then we have characters in the window that are NOT the character that occurs the most. end-start+1-maxCount is equal to exactly the # of characters that are NOT the character that occurs the most in that window. Example: For a window "xxxyz", end-start+1-maxCount would equal 2. (maxCount is 3 and there are 2 characters here, "y" and "z" that are not "x" in the window.)</p>
+					<p>We are allowed to have at most k replacements in the window, so when end-start+1-maxCount > k, then there are more characters in the window than we can replace, and we need to shrink the window.</p>
+					<p>If we have window with "xxxy" and k = 1, that's fine because end-start+1-maxCount = 1, which is not > k. maxLength gets updated to 4. But if we then find a "z" after, like "xxxyz", then we need to shrink the window because now end-start+1-maxCount = 2, and 2 > 1. The window becomes "xxyz".</p>
+				</div>
+			</article>
+		
+			<h1 class="title">Solution Code</h1>
+			<div class="solution_box">
+				<img src="page1/solution.png" class="solution" alt="Solution Code Image">
+			</div>
+			
+		</section>
+
+		<section class="video">
+			<h1 class="title">Solution Video</h1>
+			<article>
+				<div class="solution-media">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/ypEEgP7Hg_I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</article>
+		</section>
+
+		<section class="title">
+			<h1>Soothing Music Audio</h1>
+			<audio controls>
+					<source src="page1/music.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+			</audio>
+		</section>
+
+	</body>
+
+	<footer>
+		<div class="footer">
+			<p>© 2019 Gangmin (Max) Kim</p>
+		</div>
+	</footer>
+</html>

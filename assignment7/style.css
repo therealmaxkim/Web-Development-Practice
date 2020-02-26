@@ -1,0 +1,228 @@
+
+
+.logo_box {
+    border: 1px solid black;
+    background-color: lightgray;
+    font-size: 16px;
+}
+.main-header {
+    text-align: center;
+    background: lightblue;
+    border: 1px solid black;
+    display: block;
+    width: 100%;
+}
+.img_container {
+    position: relative;
+    margin: 0; 
+    justify-self: center;
+    max-width: 50%;
+    max-height: 10%;
+    padding: 10px;
+}
+.total {
+    text-align: right;
+    font-size: 2em;
+    border: 2px dotted green;
+}
+.footer {
+    text-align: center;
+    background: lightblue;
+    border: 1px solid black;
+    display: block;
+    width: 100%;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 10%;
+}
+.row2 {
+    display: flex;
+    flex-direction: row;
+    min-height: 10%;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+}
+.title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+    text-align: center;
+    clear: right;
+}
+.label {
+    color:darkblue; 
+}
+.radio_custom {
+    border-radius: 3px;
+}
+.radio_custom:hover {
+    color: #faf482;
+}
+.checkbox_custom {
+    border-radius: 50px;
+}
+.text_info {
+    border: 4px solid lightblue;
+    border-radius: 4px;
+}
+.img_box {
+    min-width: 15%;
+    display: flex;
+    justify-content: center;
+}
+.item_labels {
+    display:inline-block;
+    padding: 5px;
+    font-size: 1.5em;
+    align-self: center;
+    text-align: center;
+    min-width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+.labels {
+    display:inline-block;
+    padding: 5px;
+    font-size: 1.5em;
+    align-self: center;
+    text-align: center;
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#output {
+    font-size: 1.5em;
+}
+
+.style0 {
+    border: 1px dotted skyblue; 
+    font-size: 1.5rem; 
+    background-color: skyblue;
+}
+.style1 {
+    border: 1px dotted green;
+    font-size: 1.5rem; 
+    background-color: green;
+}
+.style2 {
+    border: 1px dotted lightcoral; 
+    font-size: 1.5rem; 
+    background-color: lightcoral;
+}
+.style3 {
+    border: 1px dotted brown; 
+    font-size: 1.5rem; 
+    background-color: brown; 
+}
+.style4 {
+    border: 1px dotted yellow; 
+    font-size: 1.5rem; 
+    background-color: darkorange; 
+}
+.style5 {
+    border: 1px dotted yellow; 
+    font-size: 1.5rem; 
+    background-color: darkgreen; 
+}
+
+.block {
+    min-width: 50%;
+    display: block;
+    font-size: 1.5em;
+    align-content: center;
+    align-self: center;
+}
+.list_and_table {
+    border: 1px solid black;
+    background-color:lightgrey; 
+    color: black;
+    font-size: 16px;
+    display: list-item;
+}
+.title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+    text-align: center;
+    clear: right;
+}
+.checkout {
+    align-self: center;
+    width: 30%;
+    height: 20%;
+    font-size: 3em;
+    margin: 10px;
+    border: 1px solid green;
+}
+.navbar {
+    display: flex;
+    flex-direction: row; 
+    background-color: #333333; 
+    margin: 0;
+    overflow: hidden;
+}
+.navbar ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+.navbar ul li a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    padding: 1em; 
+}
+.navbar ul li a:link {
+    background-color: darkgrey;
+}
+.navbar ul li a:visited {
+    background-color: grey;
+}
+.navbar ul li a:hover {
+    background-color: #6b5b95; 
+}
+.navbar ul li a:active {
+    background-color: #ff7b25; 
+}   
+.center {
+    text-align: center;
+    font-size: 1.5rem;
+}
+input[type=text], input[type=email], input[type=number]{
+    border: 2px solid lightseagreen;
+    border-radius: 4px;
+    font-size: 2rem;
+    margin: 10px;
+    width: 50%;
+    align-self: center;
+}
+input[type=submit] {
+    border: 2px solid orange;
+    border-radius: 4px;
+    font-size: 2rem;
+    color: orange;
+    margin: 10px;
+    width: 50%;
+    align-self: center;
+}
+input[type=reset] {
+    border: 2px solid lightcoral;
+    border-radius: 4px;
+    font-size: 2rem;
+    color: lightcoral;
+    margin: 10px;
+    width: 50%;
+    align-self: center;
+}
+.block {
+    display: block;
+    font-size: 1.5em;
+}
+.label {
+    color:darkblue; 
+}

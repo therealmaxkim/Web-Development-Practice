@@ -1,0 +1,152 @@
+<!DOCTYPE HTML> 
+
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- External CSS stylesheet-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="store.html">Assignment 7: Homepage/Store</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="search.html">Search</a></li>
+        </ul>
+    </nav>
+    <nav class="navbar">
+        <ul>
+            <li><a href="register.source.php">Register PHP Source</a></li>
+            <li><a href="login.source.php">Login PHP Source</a></li>
+            <li><a href="search.source.php">Search PHP Source</a></li>
+            <li><a href="store.source.php">Store PHP Source</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-header">
+        <h1>Welcome to the page where I store shopping cart info!</h1>
+    </div>
+
+    <body>
+        <form action="store.php" method=post>
+            <div class="row">
+                <div class="img_box">
+                    <img src="./images/hoodie.jpeg" class="img_container" alt="hoodie picture">
+                </div>
+
+                <p class="total">Hoodie: $30</p>
+
+                <span class="item_labels">
+                    <label for="size" class="label">Size:</label>
+                    <select class="block">
+                        <optgroup label="sizes" name="sizes">
+                            <option value="small" name="small">small</option>
+                            <option value="medium" name="medium">medium</option>
+                            <option value="large" name="large">large</option>
+                        </optgroup>
+                    </select>
+                </span>
+                <span class="item_labels">
+                    <label for="amount1" class="label">Amount:</label>
+                    <input type="number" id="amount1" class="block" name="amount1" value="0">
+                </span>
+                <span class="item_labels">
+                    <label for="subtotal1" class="label">Subtotal:</label>
+                    <textarea id="subtotal1" class="block" name="subtotal1">$0.00</textarea>
+                </span>
+            </div>
+            <div class="row">
+                <div class="img_box">
+                    <img src="./images/tshirt.jpeg" class="img_container" alt="tshirt picture">
+                </div>
+
+                <p class="total">T-shirt: $20</p>
+
+                <span class="item_labels">
+                    <label for="size" class="label">Size:</label>
+                    <select class="block">
+                        <optgroup label="sizes" name="sizes">
+                            <option value="small" name="small">small</option>
+                            <option value="medium" name="medium">medium</option>
+                            <option value="large" name="large">large</option>
+                        </optgroup>
+                    </select>
+                </span>
+                <span class="item_labels">
+                    <label for="amount2" class="label">Amount:</label>
+                    <input type="number" id="amount2" class="block" name="amount2" value="0"/>
+                </span>
+                <span class="item_labels">
+                    <label for="subtotal2" class="label">Subtotal:</label>
+                    <textarea id="subtotal2" class="block" name="subtotal2">$0.00</textarea>
+                </span>
+            </div>
+            <div class="row">
+                <div class="img_box">
+                    <img src="./images/socks.jpg" class="img_container" alt="socks picture">
+                </div>
+
+                <p class="total">socks: $5</p>
+
+                <span class="item_labels">
+                    <label for="size" class="label">Size:</label>
+                    <select class="block">
+                        <optgroup label="sizes" name="sizes">
+                            <option value="small" name="small">small</option>
+                            <option value="medium" name="medium">medium</option>
+                            <option value="large" name="large">large</option>
+                        </optgroup>
+                    </select>
+                </span>
+                <span class="item_labels">
+                    <label for="amount3" class="label">Amount:</label>
+                    <input type="number" id="amount3" class="block" name="amount3" value="0">
+                </span>
+                <span class="item_labels">
+                    <label for="subtotal3" class="label">Subtotal:</label>
+                    <textarea id="subtotal3" class="block" name="subtotal3">$0.00</textarea>
+                </span>
+            </div>
+            <div class="total">
+                <p>Grand total:</p>
+                <p id="grand_total">$0.00</p>
+            </div>
+            <div class="col">
+                <span class="labels">
+                    <label for="first_name" class="label">First Name</label>
+                    <input type="text" class="block" id="first_name" name="first_name"/>
+                </span>
+                <span class="labels">
+                    <label for="last_name" class="label">Last Name</label>
+                    <input type="text" class="block" id="last_name" name="last_name"/>
+                </span>
+                <span class="labels">
+                    <label for="email" class="label">Email address</label>
+                    <input type="email" class="block" id="email" name="email"/>
+                </span>
+                <span class="labels">
+                    <label for="card" class="label">Credit Card Number (Numbers only, no dash)</label>
+                    <input type="text" class="block" id="card" name="card" placeholder="1111222233334444"/>
+                </span>
+                <span class="labels">
+                    <label for="zipcode" class="label">Zipcode</label>
+                    <input type="text" class="block" id="zipcode" name="zipcode"/>
+                </span>
+                <input class="center" type="submit" value="Order">
+                <input type="reset" value="Reset" />
+            </div>
+        </form>
+
+        <script type='text/javascript' src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+        <script src="store.js"></script>
+    </body>
+
+    <footer>
+        <div class="footer">
+            <p>© 2019 Gangmin (Max) Kim</p>
+        </div>
+    </footer>
+</html>

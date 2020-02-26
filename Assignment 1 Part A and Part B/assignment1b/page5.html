@@ -1,0 +1,99 @@
+<!DOCTYPE HTML> 
+
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        --> 
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home: Merge k Sorted Lists</a></li>
+                <li><a href="page1.html">Longest Repeating Character Replacement</a></li>
+                <li><a href="page2.html">Relative Sort Array</a></li>
+                <li><a href="page3.html">Remove Nth Node From End of List</a></li>
+                <li><a href="page4.html">Set Matrix Zeroes</a></li>
+                <li><a href="page5.html">HTML Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article> 
+        <header>
+            <div class="main-header">
+                <h1>HTML Form</h1>
+            </div>
+        </header>
+    </article>
+
+    <body>
+        <form action="/signup" method="POST" id="signup_form">
+            <fieldset class="column">
+                <legend class="title">About you:</legend>
+
+                <section class="column text_info">
+                    <input type="text" id="first_name" name="first_name" >
+                    <label for="first_name" class="label">First Name</label>
+
+                    <input type="text" id="last_name" name="last_name" >
+                    <label for="last_name" class="label">Last Name</label>
+
+                    <input type="email" id="email_address" name="email_address">
+                    <label for="email_address" class="label">Email address</label>
+                </section>
+
+                <section class="column questions">
+                    <input type="number" id="fav_number" name="fav_number" min="0" max="100">
+                    <label for="fav_number">Enter your favorite number between 0 and 100</label>
+
+                    <input type="range" id="rating" name="rating" min="0" max="10">
+                    <label for="rating">Rate my website from 0 to 10</label>
+
+                    <input type="color" id="least_color" name="least_color" value="#00ff00">
+                    <label for="least_color">Choose your least favorite color</label>
+
+                    <select id="select_color">
+                        <optgroup label="Primary Colors" name="primary_colors">
+                            <option value="green" name="green" >green</option>
+                            <option value="red" name="red" >red</option>
+                            <option value="blue" name="blue" >blue</option>
+                        </optgroup>
+                    </select>
+                    <label for="select_color">Select your favorite color</label>
+                </section>
+
+                <section class="column other">
+                    <input type="radio" id="gender1" name="gender" value="male" class="radio_custom">
+                    <label for="gender1">male</label>
+                    <input type="radio" id="gender2" name="gender" value="female" class="radio_custom">
+                    <label for="gender2">female</label>
+    
+                    <textarea id="message" name="message" rows="5" cols="10"></textarea>
+                    <label for="message">Enter your major</label>
+    
+                    <input type="checkbox" id="subscribe" name="subscribe" value="youtube" class="checkbox_custom">
+                    <label for="subscribe">Subscribe to Youtube Channel?</label>
+                </section>
+
+                <section class="buttons">
+                    <button type="button" name="nothing_button">Click this button to do nothing</button>
+                    <input type="submit" name="nothing_button2" value="Submit">
+                </section>
+
+            </fieldset>
+        </form>
+        <button type="submit" form="signup_form" name="submit_button" value="Submit">Submit2</button>
+    </body>
+
+    <footer>
+        <div class="footer">
+            <p>© 2019 Gangmin (Max) Kim</p>
+        </div>
+    </footer>
+</html>

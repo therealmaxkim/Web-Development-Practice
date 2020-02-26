@@ -1,0 +1,149 @@
+<!DOCTYPE HTML> 
+
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home: Merge k Sorted Lists</a></li>
+                <li><a href="page1.html">Longest Repeating Character Replacement</a></li>
+                <li><a href="page2.html">Relative Sort Array</a></li>
+                <li><a href="page3.html">Remove Nth Node From End of List</a></li>
+                <li><a href="page4.html">Set Matrix Zeroes</a></li>
+                <li><a href="page5.html">HTML Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article> 
+        <header>
+            <div class="main-header">
+                <h1>Remove Nth Node From End of List</h1>
+            </div>
+        </header>
+    </article>
+
+    <body>
+        <section class="problem-statement"> 
+            <article> 
+                <h1 class="title">Problem Description</h1>
+                <p>Given a linked list, remove the n-th node from the end of list and return its head.</p>
+            </article>
+
+            <article>
+                <h1>Examples</h1>
+                <p>Input:</p>
+                <p>Given linked list: 1->2->3->4->5, and n = 2. </p>
+                <p>After removing the second node from the end, the linked list becomes 1->2->3->5.</p>
+                <p>Output:</p>
+                <p>1->2->3->5</p>
+            </article>
+
+            <article>
+                <h1>Note: </h1>
+                <p>Given n will always be valid.</p>
+            </article>
+
+            <article>
+                <h1>Followup: </h1>
+                <p>Could you do this in one pass?</p>
+            </article>
+
+        </section>
+
+        <section class="my-solution">
+            <article>
+                <h1 class="title">Questions</h1>
+                <ol>
+                    <li>Can n be zero?</li>
+                </ol>
+            </article>
+
+            <article>
+                <h1 class="title">Observations</h1>
+                <ol>
+                    <li>n is always valid, and can be from n to length of list-1</li>
+                    <li>if n is zero, then you are deleting the head of the list </li>
+                    <li>is removing nth from the end equivalent to something else?</li>
+                </ol>
+            </article>
+
+            <aside class="photos">
+                <img src="page3/diagram.png" class="left" alt="Diagram 1">
+                <img src="page3/diagram2.jpg" class="right" alt="Diagram 2">
+            </aside>
+
+            <h1 class="title">Ideas</h1>
+            <article>
+                <div>
+                    <h2>Idea 1: Two Pass Method </h2>
+                    <ol>
+                        <li>Find the length of the list (traverse once with a counter until pointer is None)</li>
+                        <li>Traverse to node and delete it (traverse to the node before that needs to be deleted)</li>
+                        <li>Return the head </li>
+                        <li>If n is equal to the length, simply return the new head (head.next)</li>
+                    </ol>
+                    <p>Edge cases: deleting the first element of the list</p>
+                </div>
+
+                <div>
+                    <h2>Idea 2: One Pass Method</h2>
+                    <ol>
+                        <li>Save all references into a list with indices corresponding to order </li>
+                        <li>Lookup the reference to node and delete it </li>
+                    </ol>
+                </div>
+
+                <div>
+                    <h2>Correct idea: One Pass Method (two pointer)</h2>
+                    <ol>
+                        <li>Initialize a pointer, A at first node </li>
+                        <li>Initialize a pointer, B at n nodes ahead</li>
+                        <li>Increment both pointers until B's next is None </li>
+                        <li>At that point, A will be pointing to the node right before the node that needs to be deleted </li>
+                        <li>Return the head's next if you are trying to delete the head</li>
+                    </ol>
+                    <p>edge case: if B goes out of bounds trying to go n nodes ahead, then you are trying to delete the first node</p>
+                </div>
+            </article>
+
+            <h1 class="title">Solution Code</h1>
+            <div class="solution_box">
+                <img src="page3/solution.png" class="solution" alt="Solution Code Image">
+            </div>
+        </section>
+
+        <section class="video">
+            <h1 class="title">Solution Video</h1>
+            <article>
+                <div class="solution-media">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/paScukd62C8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </article>
+        </section>
+
+        <section class="title">
+            <h1>Soothing Music Audio</h1>
+            <audio controls>
+                    <source src="page3/music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio>
+        </section>
+
+    </body>
+
+    <footer>
+        <div class="footer">
+            <p>© 2019 Gangmin (Max) Kim</p>
+        </div>
+    </footer>
+</html>

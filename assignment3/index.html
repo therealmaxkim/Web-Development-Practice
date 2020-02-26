@@ -1,0 +1,142 @@
+<!--
+Labor Day
+https://commons.wikimedia.org/wiki/File:First_United_States_Labor_Day_Parade,_September_5,_1882_in_New_York_City.jpg
+
+Fall
+https://events.nyu.edu/#!view/event/event_id/173989
+
+Thanksgiving
+https://en.wikipedia.org/wiki/Thanksgiving#/media/File:Our_(Almost_Traditional)_Thanksgiving_Dinner.jpg
+
+Winter
+https://elmroad.phmschools.org/sites/elmroad.phmschools.org/files/styles/large/public/Winter%20Break1.jpg?itok=y4rdeQbA
+
+President
+https://commons.wikimedia.org/wiki/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg
+
+Spring 
+https://www.unlv.edu/sites/default/files/styles/850_width/public/event_images/D69655_12.jpg?itok=d3TSCA_w
+
+Memorial
+https://commons.wikimedia.org/wiki/File:Graves_at_Arlington_on_Memorial_Day.JPG
+
+Independence
+https://commons.wikimedia.org/wiki/File:Fourth_of_July_fireworks_behind_the_Washington_Monument,_1986.jpg
+-->
+<!DOCTYPE HTML> 
+
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="style.css">
+        <!-- External Javascript File-->
+        <script type="text/javascript" src="asg3.js"></script>
+    </head>
+
+    <header>
+        <div class="main-header">
+            <h1>Web Development 2019</h1>
+        </div>
+    </header>
+
+    <body onload="randImage()">
+        <h1 class="title">Random Image Application</h1>
+        <div class="vertical_row"> 
+            <div class="img_box">
+                <img id="image" class="img_container" src="">
+            </div>
+        </div>
+
+        <h1 class="title">Slide Show Application</h1>
+        <div class="horizontal_row">
+            <div class="slide" id="slide1">
+                <img src="./images/image4.jpg" class="slide_img">
+            </div>
+
+            <div class="slide" id="slide2">
+                <img src="./images/image5.jpg" class="slide_img">
+            </div>
+
+            <div class="slide" id="slide3">
+                <img src="./images/image6.jpg" class="slide_img">
+            </div>
+
+            <div class="slide" id="slide">
+                <img src="./images/image7.jpg" class="slide_img">
+            </div>
+        </div>
+        <div class="horizontal_row">
+            <button id="play" class="block" onclick="play()" >Play</button>
+            <button id="pause" class="block" onclick="pause()">Pause</button>
+        </div>
+
+        <h1 class="title">Simple Crap Game</h1>
+        <form action="" method="post">
+            <div class="vertical_row">
+                <div class="horizontal_row">
+                    <div class="dice">
+                        <img src="" class="dice_img">
+                    </div>
+                    <div class="dice">
+                        <img src="" class="dice_img">
+                    </div>
+                </div>
+                <div class="horizontal_row">
+                    <label class="center" for="bet_input">Bet Amount. Minimum bet 1, max bet 10</label>
+                    <input type="number" id="bet_input" name="bet_input" min="1" max="10">
+                </div>
+                <div class="horizontal_row">
+                    <label class="center" for="bet_output">Bet Result:</label>
+                    <textarea id="bet_output" name="bet_output"></textarea>
+                </div>
+                <div class="vertical_row">
+                    <input type="button" class="block" value="Roll dice" onclick="rollDice()"></button>
+                </div>
+            </div>
+        </form>
+
+        <h1 class="title">NYU Holiday Calendar Application</h1>
+            <div class="vertical_row">
+                <label for="start">Insert a date:</label>
+                <input type="date" id="date_input" name="date_input" value="2019-10-18">
+                <input type="button" class="block" value="Check if holiday" onclick="check_holiday()"></button>
+            </div>
+            <div class="vertical_row"> 
+                <p id="output" class="vertical_row"></p>
+            </div>
+
+        <script>
+            var index = 0;
+            var playing = null; 
+            playSlides();
+
+            function playSlides() {
+                var slides = document.getElementsByClassName("slide");
+                for (var i=0; i<slides.length; i++) {
+                    slides[i].style.display="none";
+                }
+                index = ((index+1) % slides.length);
+                slides[index].style.display = 'block';
+                playing = setTimeout("playSlides()", 2000);
+            }
+            function play() {
+                if (playing == null) {
+                    playing = setTimeout("playSlides()", 2000);
+                } 
+            }
+            function pause() {
+                clearTimeout(playing);
+                playing = null;
+            }
+            document.getElementById('play').onclick = play;
+            document.getElementById('pause').onclick = pause;
+        </script>
+    </body>
+    <footer>
+        <div class="footer">
+            <p>© 2019 Gangmin (Max) Kim</p>
+        </div>
+    </footer>
+</html>

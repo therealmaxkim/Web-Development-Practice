@@ -1,0 +1,51 @@
+.slide, .dice, .img_box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.slide_img, .dice_img, .img_container{
+    position: relative;
+    margin: 0; 
+    justify-self: center;
+    max-width: 50%;
+    max-height: 50%;
+    padding: 10px;
+}
+.dice {
+    max-width: 50%;
+}
+.vertical_row {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 2rem;
+}
+.horizontal_row {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 2rem;
+    border: 1px solid green;
+}
+.center {
+    text-align: center;
+    font-size: 3rem;
+}
+.title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+    text-align: center;
+    clear: right;
+}
+.block {
+    display: block;
+    width: 100%;
+    background-color: lightgreen;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+#bet_input, #bet_output, #date_input {
+    font-size: 2rem;
+}

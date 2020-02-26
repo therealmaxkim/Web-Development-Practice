@@ -1,0 +1,87 @@
+.main-header {
+    text-align: center;
+    background: lightblue;
+    border: 1px solid black;
+    display: block;
+    width: 100%;
+}
+.intro {
+    display: flex;
+    flex-direction: row;
+    background: lightblue;
+    text-align: center;
+}
+.footer {
+    text-align: center;
+    background: lightblue;
+    border: 1px solid black;
+    display: block;
+    width: 100%;
+}
+.assignment-links {
+    border: 1px solid black;
+    display: block;
+    width: 100%;
+    background:lightgreen;
+    text-align: center;
+}
+.assignment-links li {
+    margin: 10px;
+    border: 1px solid green;
+    padding: 10px;
+}
+.assignment-links ul {
+    list-style: none;
+    display: inline-block;
+}
+.column-left{ 
+    float: left; 
+    width: 33.333%; 
+}
+.column-right{ 
+    float: right; 
+    width: 33.333%;
+    display: flex;
+    flex-direction: column; 
+}
+.column-center{ 
+    display: inline-block; 
+    width: 33.333%; 
+    max-width: 33.33%;
+}
+.column-right iframe {
+    width: 100%; 
+    min-height: 90%;
+}
+.photo {
+    width: 100%;
+    height: auto;
+}
+.column-right a {
+    max-height: 10%;
+}
+
+@media screen and (max-width: 600px) {
+    .assignment-links, .intro, .column-left, .column-right, .column-center {
+        font-size: 1.25rem;
+    }
+    .intro {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .assignment-links, .intro, .column-left, .column-right, .column-center {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        padding: 1rem;
+    }
+    .intro {
+        flex-direction: column;
+    }
+    .column-left, .column-center, .column-right {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML> 
+
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        --> 
+        <!-- Style.css-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- External Javascript File-->
+        <script type="text/javascript" src="asg2.js"></script>
+    </head>
+
+    <header>
+        <div class="main-header">
+            <h1>Assignment 2 Javascript Functions</h1>
+        </div>
+    </header>
+
+    <body>
+        <h1 class="style0">Function 1: Style Application</h1>
+        <div class="horizontal_row"> 
+            <div class="style1">Blue Waves</div>
+            <div class="style2">Green Trees</div>
+            <div class="style3">Red Apricots</div>
+            <div class="style4">Brown Dirt</div>
+            <div class="style5">Yellow Sun</div>
+        </div>
+        <div class="center">
+            <button class="change_style" type="button" onclick="change()">Change Style</button>
+        </div>
+        
+        <h1>Function 2: Prize Application</h1>
+        <div class="horizontal_row"> 
+            <p>Congratulations! You won a : </p>
+            <div id="prize"></div>
+            <div class="center">
+                <button class="change_style" type="button" onclick="randArray()">Win a Prize</button>
+            </div>
+        </div> 
+
+        <h1>Function 3: Swap Text Application</h1>  
+        <div class="horizontal_row"> 
+            <p id="p1" onclick="swapT()">The quick brown fox jumps over the lazy dog.</p>
+            <p id="p2" onclick="swapT()">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <h1>Function 4: Swap Image Application</h1>
+        <div class="horizontal_row"> 
+            <img id="img1" onclick="swapI()" src="img1.jpg">
+            <img id="img2" onclick="swapI()" src="img2.jpg">
+        </div>
+
+        <h1>Function 6: Simple converter application (Note: Function 5 is below)</h1>
+        <form action="" method="post">
+            <div class="vertical_row">
+                <div class="vertical_row">
+                    <label class="center" for="Fahrenheit">Fahrenheit:</label>
+                    <output class="center" name="fahrenheit_value" id="f_value">82&#8457</output>   
+                </div>
+                <div class="vertical_row">
+                    <input type="range" name="Fahrenheit" id="f_input" min="-60" max="224" oninput="f_value.value = f_input.value + '&#8457';">
+                </div>
+                <div class="vertical_row">
+                    <input type="button" class="change_style" value="Convert" onclick="convertTemp()"></button>
+                </div>
+                <div class="vertical_row">
+                    <label class="center" for="celsius">Celsius:</label>
+                    <textarea id="celsius" name="celsius"></textarea>
+                </div>
+            </div>
+        </form>
+        
+        <h1>Function 5: Generate new document application</h1>
+        <div id="horzontal_row"> 
+            <img id="img2" onclick="newDoc()" src="img2.jpg">
+        </div>  
+        
+    </body>
+
+    <footer>
+        <div class="footer">
+            <p>© 2019 Gangmin (Max) Kim</p>
+        </div>
+    </footer>
+</html>

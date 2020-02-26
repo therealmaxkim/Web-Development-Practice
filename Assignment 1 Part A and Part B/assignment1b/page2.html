@@ -1,0 +1,131 @@
+<!DOCTYPE HTML> 
+
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home: Merge k Sorted Lists</a></li>
+                <li><a href="page1.html">Longest Repeating Character Replacement</a></li>
+                <li><a href="page2.html">Relative Sort Array</a></li>
+                <li><a href="page3.html">Remove Nth Node From End of List</a></li>
+                <li><a href="page4.html">Set Matrix Zeroes</a></li>
+                <li><a href="page5.html">HTML Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article> 
+        <header>
+            <div class="main-header">
+                <h1>Relative Sort Array</h1>
+            </div>
+        </header>
+    </article>
+
+    <body>
+        <section class="problem-statement"> 
+            <article> 
+                <h1 class="title">Problem Description</h1>
+                <p>Given two arrays arr1 and arr2, the elements of arr2 are distinct, and all elements in arr2 are also in arr1.</p>
+                <p>Sort the elements of arr1 such that the relative ordering of items in arr1 are the same as in arr2.  Elements that don't appear in arr2 should be placed at the end of arr1 in ascending order.</p>
+            </article>
+
+            <article>
+                <h1>Examples</h1>
+                <p>Input:</p>
+                <p>arr1 = [2,3,1,3,2,4,6,7,9,2,19], arr2 = [2,1,4,3,9,6]</p>
+                <p>Output:</p>
+                <p>[2,2,2,1,4,3,3,9,6,7,19]</p>
+            </article>
+
+            <article>
+                <h1>Constraints</h1>
+                <ul>
+                    <li>arr1.length, arr2.length <= 1000</li>
+                    <li>0 <= arr1[i], arr2[i] <= 1000</li>
+                    <li>Each arr2[i] is distinct.</li>
+                    <li>Each arr2[i] is in arr1.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="my-solution">
+            <article>
+                <h1 class="title">Questions</h1>
+                <ol>
+                    <li>Can arr1 be empty?</li>
+                </ol>
+            </article>
+
+            <article>
+                <h1 class="title">Observations</h1>
+                <ol>
+                    <li>arr1 is not distinct. but arr2 is distinct </li>
+                    <li>both arrays are randomly ordered</li>
+                    <li>there may be or not be repeated numbers in arr1</li>
+                    <li>arr1 has numbers from arr2 or not </li>
+                </ol>
+            </article>
+
+            <aside class="photos"> 
+                <img src="page2/diagram.png" class="left" alt="Diagram 1">
+                <img src="page2/diagram2.png" class="right" alt="Diagram 2">
+            </aside>
+
+            <article>
+                <h1 class="title">Ideas</h1>
+                <h2>Idea 1</h2>
+                <ol>
+                    <li>part 1: sort arr1 that are in arr2 </li>
+                    <li>part 2: sort arr1 that are not in arr2 </li>
+                </ol>
+                <p>you only need to remember how many of one number exists. You can sort them into a list later. </p>
+                <ol>
+                    <li>First, map the numbers in arr2 with the indices.</li>
+                    <li>Then, have another map that maps each number with the frequency that htey appear</li>
+                    <li>if a number in arr1 doesn't appear in arr2, simply add it to another list</li>
+                    <li>have a new list and append each number in arr2 by their order and append a number of times equal to frequency. </li>
+                </ol>
+            </article>
+
+            <h1 class="title">Solution Code</h1>
+            <div class="solution_box">
+                <img src="page2/solution.png" class="solution" alt="Solution Code Image">
+            </div>
+        </section>
+
+        <section class="video">
+            <h1 class="title">Solution Video</h1>
+            <article>
+                <div class="solution-media">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nW85iS39kSw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </article>
+        </section>
+
+        <section class="title">
+            <h1>Soothing Music Audio</h1>
+            <audio controls>
+                <source src="page2/music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio>
+        </section>
+
+    </body>
+
+    <footer>
+        <div class="footer">
+            <p>© 2019 Gangmin (Max) Kim</p>
+        </div>
+    </footer>
+</html>
